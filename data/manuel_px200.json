@@ -1,0 +1,27 @@
+{
+  "titre": "Manuel fictif PX-200",
+  "passages": [
+    {
+      "id": "PX200-B",
+      "page": 18,
+      "mots": ["bourrage", "coince", "bloque", "bourree"],
+      "extrait": "Un pictogramme représentant une feuille barrée signale un bourrage papier. Éteignez l’imprimante, ouvrez le capot arrière et retirez doucement le papier coincé. Refermez le capot puis rallumez l’imprimante."
+    },
+    {
+      "id": "PX200-E",
+      "page": 19,
+      "mots": ["encre", "cartouche", "cartouches", "goutte"],
+      "extrait": "Un pictogramme en forme de goutte signale un niveau d’encre faible. Vérifiez les niveaux dans le menu Maintenance et remplacez la cartouche indiquée si nécessaire."
+    },
+    {
+      "id": "PX200-V",
+      "page": 17,
+      "mots": ["voyant", "clignote", "clignotant", "clignotement", "pictogramme", "ecran"],
+      "extrait": "Le voyant d’alerte clignotant indique qu’une intervention peut être nécessaire. Le pictogramme affiché ou le code à l’écran permet d’identifier la cause."
+    }
+  ],
+  "figures": [
+    {"id": "2.1", "page": 18, "fichier": "figure_bourrage.png", "passage": "PX200-B", "legende": "Feuille barrée"},
+    {"id": "2.2", "page": 19, "fichier": "figure_encre.png", "passage": "PX200-E", "legende": "Goutte d’encre"}
+  ]
+}
