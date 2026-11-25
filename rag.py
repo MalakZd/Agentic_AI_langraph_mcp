@@ -4,12 +4,18 @@ import json
 import re
 import unicodedata
 from pathlib import Path
+from typing import TypedDict
 
 from PIL import Image, ImageChops, ImageOps, ImageStat
 
 
 DATA = Path(__file__).resolve().parent / "data"
 TAILLE_PHOTO_MAX = 2_000_000
+
+
+class ReponseDocumentaire(TypedDict):
+    reponse: str
+    sources: list[str]
 
 
 def mots(texte: str) -> set[str]:
@@ -54,7 +60,7 @@ def chercher_figure(photo_base64: str, figures: list[dict]) -> dict | None:
     return None
 
 
-def repondre(question: str, photo_base64: str | None = None) -> dict:
+def repondre(question: str, photo_base64: str | None = None) -> ReponseDocumentaire:
     manuel = json.loads((DATA / "manuel_px200.json").read_text(encoding="utf-8"))
     termes = mots(question)
     figure = chercher_figure(photo_base64, manuel["figures"]) if photo_base64 else None
