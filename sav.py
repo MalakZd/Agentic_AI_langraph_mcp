@@ -145,7 +145,7 @@ async def main():
     graphe = construire_graphe()
     for question, photo in cas:
         etat = await graphe.ainvoke({"question": question, "photo": photo, "url_mcp": args.mcp_url})
-        print(f"\n{etat['categorie']} | {etat['agent']}\n{' → '.join(etat['parcours'])}\n{etat['reponse']}")
+        print(f"\n{etat['categorie']} | {etat['agent']}\n{' -> '.join(etat['parcours'])}\n{etat['reponse']}")
         for source in etat["sources"]:
             print(f"  - {source}")
 
